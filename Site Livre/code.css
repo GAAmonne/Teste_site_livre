@@ -1,0 +1,157 @@
+/* Reset CSS pour assurer une uniformité entre les navigateurs */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles CSS pour la mise en page */
+body {
+    background-image: url('image/ville.jpg'); /* Chemin vers votre image de fond */
+    background-size: cover; /* L'image couvre toute la zone */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Couleur de fond de secours si l'image ne se charge pas */
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header.banner {
+    background: url('image/fond.jpeg') no-repeat center center / cover; /* Image en arrière-plan */
+    border-bottom: 5px solid gold; /* Bordure dorée */
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between; /* Aligner les éléments à l'extrémité */
+    align-items: center; /* Centrer verticalement les éléments */
+    position: relative;
+}
+
+header.banner .logo {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-top: 20px; /* Augmenter l'espace en haut des liens */
+}
+
+nav ul li {
+    display: inline-block; /* Utiliser inline-block pour faciliter la mise en forme */
+    margin: 0 20px; /* Espacement horizontal entre les liens */
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px; /* Espacement interne des liens */
+}
+
+nav ul li a:hover {
+    color: gold;
+}
+
+.main-title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5em;
+}
+
+.image-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.image-link {
+    margin: 10px;
+    flex: 1 1 calc(25% - 20px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-link img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.image-link:hover img {
+    transform: scale(1.05);
+}
+
+.image-link-item {
+    display: block;
+    text-decoration: none;
+}
+
+.zone {
+    margin-top: 40px;
+}
+
+.zone .container {
+    text-align: center;
+}
+
+.zone-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.zone-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.zone-description {
+    max-width: 600px;
+}
+
+.zone-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0; /* Espacement vertical entre les liens */
+    }
+
+    .zone-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .zone-image {
+        margin: 0 0 20px 0;
+    }
+}

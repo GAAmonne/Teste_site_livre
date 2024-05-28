@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestiaire</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset CSS pour assurer une uniformité entre les navigateurs */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <header class="banner">
+        <div class="container">
+            <!-- Logo image cliquable qui retourne à la page initiale -->
+            <a href="index.html">
+                <img src="images/logo.svg" alt="Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="bestiaire.html">Bestiaire</a></li>
+                    <li><a href="hero.html">Héro</a></li>
+                    <li><a href="saga.html">Saga</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="content">
+        <div class="container">
+            <h1 class="main-title">Bestiaire</h1>
+            <div class="image-links">
+                <!-- Liens d'image avec les bons href -->
+                <div class="image-link">
+                    <a href="#creature1" class="image-link-item">
+                        <img src="images/creature1.jpg" alt="Créature 1">
+                    </a>
+                </div>
+                <div class="image-link">
+                    <a href="#creature2" class="image-link-item">
+                        <img src="images/creature2.jpg" alt="Créature 2">
+                    </a>
+                </div>
+                <div class="image-link">
+                    <a href="#creature3" class="image-link-item">
+                        <img src="images/creature3.jpg" alt="Créature 3">
+                    </a>
+                </div>
+                <div class="image-link">
+                    <a href="#creature4" class="image-link-item">
+                        <img src="images/creature4.jpg" alt="Créature 4">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sections pour chaque élément du bestiaire -->
+    <section id="creature1" class="zone">
+        <div class="container">
+            <h2 class="zone-title">Créature 1</h2>
+            <img src="images/creature1.jpg" alt="Créature 1" class="zone-image">
+        </div>
+    </section>
+
+    <section id="creature2" class="zone">
+        <div class="container">
+            <h2 class="zone-title">Créature 2</h2>
+            <img src="images/creature2.jpg" alt="Créature 2" class="zone-image">
+        </div>
+    </section>
+
+    <section id="creature3" class="zone">
+        <div class="container">
+            <h2 class="zone-title">Créature 3</h2>
+            <img src="images/creature3.jpg" alt="Créature 3" class="zone-image">
+        </div>
+    </section>
+
+    <section id="creature4" class="zone">
+        <div class="container">
+            <h2 class="zone-title">Créature 4</h2>
+            <img src="images/creature4.jpg" alt="Créature 4" class="zone-image">
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mon Livre. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>

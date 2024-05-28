@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Héros</title>
+    <link rel="stylesheet" href="code.css">
+    <style>
+        /* Reset CSS pour assurer une uniformité entre les navigateurs */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Styles CSS pour la mise en page */
+        body {
+            background-image: url('image/ville.jpg'); /* Chemin vers votre image de fond */
+            background-size: cover; /* L'image couvre toute la zone */
+            background-position: center; /* Centrer l'image */
+            background-repeat: no-repeat; /* Ne pas répéter l'image */
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4; /* Couleur de fond de secours si l'image ne se charge pas */
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header.banner {
+            background: url('image/fond.jpeg') no-repeat center center / cover;
+            border-bottom: 5px solid gold;
+            padding: 1em 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        header.banner .logo {
+            width: 100px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+        }
+
+        nav ul li a:hover {
+            color: gold;
+        }
+
+        .main-title {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 2.5em;
+        }
+
+        .image-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .image-link {
+            margin: 10px;
+            flex: 1 1 calc(25% - 20px);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .image-link img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .image-link:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-link-item {
+            display: block;
+            text-decoration: none;
+        }
+
+        .zone {
+            margin-top: 40px;
+        }
+
+        .zone .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .zone-image {
+            width: 40%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .zone-description {
+            width: 60%;
+        }
+
+        .zone-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 0 10px;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .zone .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .zone-image {
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
+
+            .zone-description {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="banner">
+        <div class="container">
+            <!-- Logo image cliquable qui retourne à la page initiale -->
+            <a href="interface.html">
+                <img src="image/logo.svg" alt="Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="bestiaire.html">Bestiaire</a></li>
+                    <li><a href="hero.html">Héros</a></li>
+                    <li><a href="saga.html">Saga</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="content">
+        <div class="container">
+            <h1 class="main-title">Héros</h1>
+            <div class="image-links">
+                <div class="image-link">
+                    <a href="#Ariel" class="image-link-item">
+                        <img src="image/hero1.png" alt="Ariel l'héroïne du livre">
+                    </a>
+                </div>
+                <div class="image-link">
+                    <a href="#Shädalanel" class="image-link-item">
+                        <img src="image/hero2.png" alt="Le Valguäsire">
+                    </a>
+                </div>
+                <div class="image-link">
+                    <a href="#Kirion" class="image-link-item">
+                        <img src="image/hero3.png" alt="Kirion">
+                    </a>
+                </div>
+                <div class="image-link">
+                    <a href="#Awanna" class="image-link-item">
+                        <img src="image/hero4.jpg" alt="Awanna">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sections pour chaque héros -->
+    <section id="Ariel" class="zone">
+        <div class="container">
+            <img src="image/hero1.png" alt="Ariel" class="zone-image">
+            <div class="zone-description">
+                <h2 class="zone-title">Ariel</h2>
+                <p>Âgée de 14 ans, elle ne connaît pas ses parents et est emportée dans une histoire sombre où elle n'a pas le contrôle.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Shädalanel" class="zone">
+        <div class="container">
+            <img src="image/hero2.png" alt="Shädalanel" class="zone-image">
+            <div class="zone-description">
+                <h2 class="zone-title">Shädalanel</h2>
+                <p>Un puissant assassin venu aider Awanna dans sa quête de vengeance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Kirion" class="zone">
+        <div class="container">
+            <img src="image/hero3.png" alt="Kirion" class="zone-image">
+            <div class="zone-description">
+                <h2 class="zone-title">Kirion</h2>
+                <p></p> <!-- Description à ajouter -->
+            </div>
+        </div>
+    </section>
+
+    <section id="Awanna" class="zone">
+        <div class="container">
+            <img src="image/hero4.jpg" alt="Awanna" class="zone-image">
+            <div class="zone-description">
+                <h2 class="zone-title">Awanna Taimon</h2>
+                <p></p> <!-- Description à ajouter -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mon Livre. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
